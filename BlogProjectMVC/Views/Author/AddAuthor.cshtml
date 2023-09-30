@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.Author
+@{
+    ViewBag.Title = "AddAuthor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    @Html.Label("YAZAR ADI SOYADI")
+    @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control" })
+    <br />
+    @Html.Label("RESİM")
+    @Html.TextBoxFor(x => x.AuthorImage, new { @class = "form-control" })
+    <br />
+    @Html.Label("YAZAR ALANI")
+    @Html.TextBoxFor(x => x.AboutShort, new { @class = "form-control" })
+    <br />
+    @Html.Label("YAZAR STATÜSÜ")
+    @Html.TextBoxFor(x => x.AuthorTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("MAIL")
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.Label("ŞİFRE")
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    @Html.Label("TELEFON")
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+    @Html.Label("YAZAR HAKKINDA")
+    @Html.TextAreaFor(x => x.AuthorAbout, 3, 20, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">KAYDET</button>
+</form>
+
